@@ -1,0 +1,127 @@
+TASKBAR TIMER  v1.0
+===================
+
+A countdown timer that sits on your taskbar showing the time remaining as
+readable text, right next to the clock. Left-click to start, right-click for
+options. It alerts you by flashing, by sound, or both.
+
+Works on Windows 10 and Windows 11.
+
+
+HOW TO INSTALL
+--------------
+
+1. Copy this whole folder onto the computer (Desktop is fine). Keep the files
+   together - the installer needs them side by side.
+
+2. Double-click  Install.cmd
+
+3. Windows may show a blue box saying "Windows protected your PC". This is
+   normal and is explained below. Click "More info", then "Run anyway".
+
+4. Answer the one question it asks - whether you want the timer to start
+   automatically with Windows.
+
+That's it. The timer appears on your taskbar showing 30:00 in amber.
+
+
+ABOUT THE "WINDOWS PROTECTED YOUR PC" WARNING
+---------------------------------------------
+
+You will probably see this, and it is worth understanding rather than just
+clicking through.
+
+Windows shows that warning for any program that has not been through a paid
+commercial code-signing process. It is not a virus warning and it does not mean
+anything was detected. It means only that Microsoft has not seen this exact file
+signed by a registered company. Small tools written for personal use are almost
+never signed, because the certificates cost hundreds of pounds a year.
+
+Click "More info", then "Run anyway".
+
+Your antivirus may also scan the file the first time it runs. That is fine, and
+it should only happen once.
+
+
+HOW TO USE IT
+-------------
+
+  Left-click                 Start or pause the countdown
+  Left-click while alarming  Silence the alarm
+  Left-drag                  Move it somewhere else on screen
+  Right-click                Everything else
+
+The right-click menu gives you:
+
+  5 to 90 minutes    Preset lengths - picking one starts it straight away
+  Custom...          Any length. Understands 25, 45m, 1h30m, 90s, 2:30
+                     A plain number means minutes.
+  Start / Pause
+  Reset
+
+  Alert with         Flash, Sound, or Both
+  Volume             10% to 100%. Picking a level plays the alarm so you can
+                     hear what you are choosing.
+  Alert for          How long the alarm keeps going: until you stop it, or
+                     15 seconds up to 5 minutes
+
+  Snap back to the tray   Returns it next to the clock after you have dragged it
+  Start with Windows      Tick or untick - it remembers
+  Exit
+
+
+WHAT THE COLOURS MEAN
+---------------------
+
+  Amber digits    Paused, or not started yet
+  Green digits    Counting down
+  Red digits      Last tenth of the time you set, so the warning comes
+                  proportionally - 3 minutes into a 30 minute countdown,
+                  30 seconds into a 5 minute one
+  Flashing red    Time is up
+
+
+WHAT THE INSTALLER CHANGES
+--------------------------
+
+  - Copies one file, TaskbarTimer.exe, to C:\Tools\TaskbarTimer
+    (or to your AppData folder if it cannot write to C:\Tools)
+  - Adds a Start Menu shortcut under your own user account
+  - Adds one startup entry, but only if you answer yes when asked
+  - Starts the timer
+
+It does not change system settings, does not need administrator rights, does not
+touch anything belonging to other users of the PC, and does not connect to the
+internet. Ever.
+
+
+SETTINGS
+--------
+
+Most things are on the right-click menu. A few extras live in a file called
+settings.ini, which appears next to the program after first use:
+
+  FontSize             Size of the digits, default 11
+  Bold                 true or false
+  FlashTickMs          How fast the alarm flashes, default 250
+  SoundFile            Full path to your own .wav file for the alarm.
+                       Leave blank to use the built-in tone.
+
+Close the timer before editing that file by hand, or your changes will be
+overwritten when it next saves.
+
+
+TO REMOVE IT
+------------
+
+Double-click  Uninstall.cmd  in this folder.
+
+It stops the timer, removes the startup entry, deletes the Start Menu shortcut
+and deletes the installed folder. Nothing is left behind.
+
+
+REQUIREMENTS
+------------
+
+Windows 10 or Windows 11, and Microsoft .NET Framework 4.x - which is already
+part of both. The installer checks and will tell you if it is somehow missing.

@@ -1,0 +1,4 @@
+﻿# Build output — regenerate with build.ps1, which compiles src\*.cs
+TaskbarTimer.exe
+dist/TaskbarTimer/TaskbarTimer.exe
+*.zip
