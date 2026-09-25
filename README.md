@@ -19,7 +19,7 @@ with notifications switched off.
 ## Build
 
 ```
-powershell -ExecutionPolicy Bypass -File "H:\My Drive\Master\Tools\Claude\taskbar-timer\build.ps1"
+powershell -ExecutionPolicy Bypass -File "H:\My Drive\Master\Illumin-Ed\Tools\Claude\taskbar-timer\build.ps1"
 ```
 
 Compiles with the C# compiler already in `C:\Windows\Microsoft.NET\`. No SDK, no NuGet,
